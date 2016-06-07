@@ -20,4 +20,9 @@ class HomeController extends BaseController {
 		return View::make('hello');
 	}
 
+	public function fail()
+	{
+		throw new Exception('This is a test exception raised from crywolf-laravel.');
+	}
+
 }

@@ -46,8 +46,10 @@ Log::useFiles(storage_path().'/logs/laravel.log');
 |
 */
 
+use Honeybadger\Honeybadger;
 App::error(function(Exception $exception, $code)
 {
+	Honeybadger::notify($exception);
 	Log::error($exception);
 });
 
