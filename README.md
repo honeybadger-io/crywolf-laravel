@@ -1,25 +1,37 @@
-## Laravel PHP Framework
+# Honeybadger Test PHP App
 
-[![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
-[![Total Downloads](https://poser.pugx.org/laravel/framework/downloads.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Stable Version](https://poser.pugx.org/laravel/framework/v/stable.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Unstable Version](https://poser.pugx.org/laravel/framework/v/unstable.svg)](https://packagist.org/packages/laravel/framework)
-[![License](https://poser.pugx.org/laravel/framework/license.svg)](https://packagist.org/packages/laravel/framework)
+Welcome to a simple PHP (Laravel) application that allows you to test the
+[Honeybadger](https://www.honeybadger.io) monitoring platform for PHP apps.
+Honeybadger allows you to easily monitor for exceptions in your PHP web
+applications.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as authentication, routing, sessions, and caching.
+## Quick Start
 
-Laravel aims to make the development process a pleasing one for the developer without sacrificing application functionality. Happy developers make the best code. To this end, we've attempted to combine the very best of what we have seen in other web frameworks, including frameworks implemented in other languages, such as Ruby on Rails, ASP.NET MVC, and Sinatra.
+The easiest way to get started with this application is to deploy it to Heroku
+with the Heroku Button:
 
-Laravel is accessible, yet powerful, providing powerful tools needed for large, robust applications. A superb inversion of control container, expressive migration system, and tightly integrated unit testing support give you the tools you need to build any application with which you are tasked.
+[![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
 
-## Official Documentation
+## Slightly Less Quick Start
 
-Documentation for the entire framework can be found on the [Laravel website](http://laravel.com/docs).
+If you'd like to do it the old fashioned way, follow these steps:
 
-### Contributing To Laravel
+1. Sign up or sign in at [Honeybadger.io](https://www.honeybadger.io)
+2. Create a new project and make a note of the api key on the settings page
+3. Clone or download this app
+4. Run `composer install` to get the necessary dependencies installed
+5. Run the app: `HONEYBADGER_ENV=production HONEYBADGER_API_KEY=your_api_key_here php artisan serve`
 
-**All issues and pull requests should be filed on the [laravel/framework](http://github.com/laravel/framework) repository.**
+## Trying It Out
 
-### License
+Once you have the app running, either on Heroku or on your local machine, browse
+to the running PHP app.  When you click on the first link, an error will be
+triggered and reported to Honeybadger. Check your email for a message from
+Honeybadger with a link to the error you just recorded.
 
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
+## Enjoy!
+
+We hope this sample app gives you an easy way to see just how awesome
+Honeybadger is. :)  If you have any questions about this app or the Honeybadger
+monitoring service, please feel free to drop us a line at
+support@honeybadger.io.
