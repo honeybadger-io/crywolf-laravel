@@ -2,7 +2,7 @@
   "name": "Honeybadger example for PHP",
   "description": "A sample PHP (Laravel) web application which reports exceptions to Honeybadger.",
   "repository": "https://github.com/honeybadger-io/crywolf-laravel/tree/laravel_5",
-  "logo": "https://www.honeybadger.io/images/logo.jpg",
+  "logo": "https://www.honeybadger.io/images/bolt.svg",
   "keywords": ["php", "laravel", "exceptions", "errors", "honeybadger"],
   "addons": [ "honeybadger" ],
   "env": {
