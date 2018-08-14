@@ -1,6 +1,6 @@
-# Honeybadger Test PHP App
+# Honeybadger Test PHP/Laravel App
 
-Welcome to a simple PHP (Laravel) application that allows you to test the
+Welcome to a simple PHP/Laravel application that allows you to test the
 [Honeybadger](https://www.honeybadger.io) monitoring platform for PHP apps.
 Honeybadger allows you to easily monitor for exceptions in your PHP web
 applications.
