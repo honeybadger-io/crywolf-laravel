@@ -7,5 +7,6 @@
   "addons": [ "honeybadger" ],
   "env": {
     "APP_KEY": "ZEqur46KTEG91iWPhKGY42wtwi3rtkx2",
+    "APP_ENV": "production",
   }
 }
