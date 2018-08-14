@@ -6,6 +6,6 @@
   "keywords": ["php", "laravel", "exceptions", "errors", "honeybadger"],
   "addons": [ "honeybadger" ],
   "env": {
-    "HONEYBADGER_ENV": "production"
+    "APP_KEY": "testing",
   }
 }
