@@ -17,10 +17,11 @@ with the Heroku Button:
 If you'd like to do it the old fashioned way, follow these steps:
 
 1. Sign up or sign in at [Honeybadger.io](https://www.honeybadger.io)
-2. Create a new project and make a note of the api key on the settings page
-3. Clone or download this app
-4. Run `composer install` to get the necessary dependencies installed
-5. Run the app: `HONEYBADGER_API_KEY=your_api_key_here php artisan serve`
+1. Create a new project and make a note of the api key on the settings page
+1. Clone or download this app
+1. Run `composer install` to get the necessary dependencies installed
+1. Create and edit the `.env` file: `cp .env.example .env`
+1. Run the app: `HONEYBADGER_API_KEY=your_api_key_here php artisan serve`
 
 ## Trying It Out
 
