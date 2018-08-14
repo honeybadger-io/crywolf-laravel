@@ -23,6 +23,23 @@ If you'd like to do it the old fashioned way, follow these steps:
 1. Create and edit the `.env` file: `cp .env.example .env`
 1. Run the app: `HONEYBADGER_API_KEY=your_api_key_here php artisan serve`
 
+### Via Docker
+
+If you already use `docker` and `docker-compose`, the easiest way to get this app
+up and running is via the [laradock](http://laradock.io/introduction/) environment:
+
+```sh
+git clone https://github.com/honeybadger-io/crywolf-laravel.git
+cd crywolf-laravel
+git submodule update --init --recursive
+cp .env.example .env
+cd laradock
+cp env-example .env
+docker-compose up -d nginx mysql phpmyadmin redis workspace 
+```
+
+Open your browser and visit localhost: http://localhost
+
 ## Trying It Out
 
 Once you have the app running, either on Heroku or on your local machine, browse
