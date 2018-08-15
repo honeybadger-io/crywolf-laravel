@@ -15,6 +15,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/fail', function () {
-    throw new Exception('This is a test exception raised from crywolf-laravel.');
-});
+Route::get('/fail', 'Fail');
