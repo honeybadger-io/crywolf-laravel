@@ -33,7 +33,7 @@ git clone https://github.com/honeybadger-io/crywolf-laravel.git
 cd crywolf-laravel
 git submodule update --init --recursive
 cp .env.example .env
-echo 'HONEYBADGER_API_KEY="your-api-key"' > .env
+echo 'HONEYBADGER_API_KEY="your-api-key"' >> .env
 cd laradock
 cp env-example .env
 docker-compose up -d nginx mysql phpmyadmin redis workspace
