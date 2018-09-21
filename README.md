@@ -43,7 +43,21 @@ docker-compose run workspace php artisan key:generate
 
 Open your browser and visit localhost: http://localhost
 
-### Issues
+#### Notes
+
+- To create a user:
+    ```
+    cd laradock
+    docker-compose run workspace bash
+    php artisan tinker
+    > $user = new App\User()
+    > $user->password = Hash::make('tester');
+    > $user->email = 'user@example.com';
+    > $user->name = 'example';
+    > $user->save();
+    ```
+
+#### Issues
 
 - [MySQL Authentication error: SQLSTATE HY000 2054 The server requested authentication method unknown to the client](https://github.com/laradock/laradock/issues/1392#issuecomment-383631421)
 
