@@ -45,7 +45,7 @@ Open your browser and visit localhost: http://localhost
 
 ### Issues
 
-- [MySQL Authentication error: SQLSTATE HY000 2054 The server requested authentication method unknown to the client](https://github.com/laradock/laradock/issues/1392#issuecomment-409612243)
+- [MySQL Authentication error: SQLSTATE HY000 2054 The server requested authentication method unknown to the client](https://github.com/laradock/laradock/issues/1392#issuecomment-383631421)
 
 ## Trying It Out
 
