@@ -23,6 +23,13 @@ If you'd like to do it the old fashioned way, follow these steps:
 1. Create and edit the `.env` file: `cp .env.example .env`
 1. Run the app: `HONEYBADGER_API_KEY=your_api_key_here php artisan serve`
 
+### Trying It Out
+
+Once you have the app running, either on Heroku or on your local machine, browse
+to the running PHP app.  When you click on the first link, an error will be
+triggered and reported to Honeybadger. Check your email for a message from
+Honeybadger with a link to the error you just recorded.
+
 ### Via Docker
 
 If you already use `docker` and `docker-compose`, the easiest way to get this app
@@ -60,13 +67,6 @@ Open your browser and visit localhost: http://localhost
 #### Issues
 
 - [MySQL Authentication error: SQLSTATE HY000 2054 The server requested authentication method unknown to the client](https://github.com/laradock/laradock/issues/1392#issuecomment-383631421)
-
-## Trying It Out
-
-Once you have the app running, either on Heroku or on your local machine, browse
-to the running PHP app.  When you click on the first link, an error will be
-triggered and reported to Honeybadger. Check your email for a message from
-Honeybadger with a link to the error you just recorded.
 
 ## Enjoy!
 
