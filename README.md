@@ -36,13 +36,9 @@ If you already use `docker` and `docker-compose`, the easiest way to get this ap
 up and running is via docker.
 
 ```sh
-git clone https://github.com/honeybadger-io/crywolf-laravel.git
-cd crywolf-laravel
-cp .env.example .env
-docker-compose up -d
-docker-compose exec web composer install
-docker-compose exec web php artisan key:generate
-docker-compose exec web php artisan honeybadger:install
+> git clone https://github.com/honeybadger-io/crywolf-laravel.git
+> cd crywolf-laravel
+> bin/run
 ```
 
 Open your browser and visit localhost: http://localhost:8080

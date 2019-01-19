@@ -76,6 +76,7 @@
                 padding: 1rem;
                 font-weight: 600;
                 margin-bottom: 3rem;
+                color: darkgreen;
             }
 
             .success-message * {

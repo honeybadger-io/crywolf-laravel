@@ -1,4 +1,5 @@
 #!/bin/bash
+
 ##
 # Repeat a character
 # $1 the character to be repeated
@@ -18,17 +19,20 @@ step() {
     sleep 3
 }
 
-step "Installing Composer dependencies"
-docker run -it --rm -v $PWD:/app composer install --ignore-platform-reqs --no-scripts
-
 step "Creating .env file"
 cp .env.example .env
 
 step "Starting containers"
 docker-compose up -d
 
+step "Installing Composer dependencies"
+docker-compose exec web composer install
+
 step "Creating application key"
 docker-compose exec web php artisan key:generate
+
+step "Installing Honeybadger"
+docker-compose exec web php artisan honeybadger:install
 
 step "Migrating tables"
 docker-compose exec web php artisan migrate
