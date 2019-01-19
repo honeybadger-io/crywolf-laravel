@@ -47,7 +47,6 @@ Open your browser and visit localhost: http://localhost:8080
 
 - To create a user:
     ```
-    cd laradock
     docker-compose exec web php artisan tinker
     > $user = new App\User()
     > $user->password = Hash::make('tester');
