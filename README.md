@@ -28,45 +28,37 @@ If you'd like to do it the old fashioned way, follow these steps:
 1. Clone or download this app
 1. Run `composer install` to get the necessary dependencies installed
 1. Create and edit the `.env` file: `cp .env.example .env`
-1. Run the app: `HONEYBADGER_API_KEY=your_api_key_here php artisan serve`
+1. Update the `HONEYBADGER_API_KEY` value with your project's API key
 
 ### Via Docker
 
 If you already use `docker` and `docker-compose`, the easiest way to get this app
-up and running is via the [laradock](http://laradock.io/introduction/) environment:
+up and running is via docker.
 
 ```sh
 git clone https://github.com/honeybadger-io/crywolf-laravel.git
 cd crywolf-laravel
-git submodule update --init --recursive
 cp .env.example .env
-echo 'HONEYBADGER_API_KEY="your-api-key"' >> .env
-cd laradock
-cp env-example .env
-docker-compose up -d nginx mysql phpmyadmin redis workspace
-docker-compose run workspace composer install
-docker-compose run workspace php artisan key:generate
+docker-compose up -d
+docker-compose exec web composer install
+docker-compose exec web php artisan key:generate
+docker-compose exec web php artisan honeybadger:install
 ```
 
-Open your browser and visit localhost: http://localhost
+Open your browser and visit localhost: http://localhost:8080
 
 #### Notes
 
 - To create a user:
     ```
     cd laradock
-    docker-compose run workspace bash
-    php artisan tinker
+    docker-compose exec web php artisan tinker
     > $user = new App\User()
     > $user->password = Hash::make('tester');
     > $user->email = 'user@example.com';
     > $user->name = 'example';
     > $user->save();
     ```
-
-#### Issues
-
-- [MySQL Authentication error: SQLSTATE HY000 2054 The server requested authentication method unknown to the client](https://github.com/laradock/laradock/issues/1392#issuecomment-383631421)
 
 ## Enjoy!
 
