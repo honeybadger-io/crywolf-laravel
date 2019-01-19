@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
-use Exception;
+use App\Exceptions\CrywolfException;
 
 class Fail extends Controller
 {
@@ -14,6 +14,6 @@ class Fail extends Controller
      */
     public function __invoke()
     {
-        throw new Exception('This is a test exception raised from crywolf-laravel.');
+        throw CrywolfException::testException();
     }
 }
