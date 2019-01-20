@@ -14,10 +14,10 @@ RUN apt-get update \
 RUN a2enmod rewrite
 
 COPY .docker/web/apache/000-default.conf /etc/apache2/sites-enabled/000-default.conf
+COPY .docker/web/run.sh /usr/local/bin/run.sh
 
 RUN groupadd -g 999 badger \
     && useradd -r -m -u 999 -g badger -G www-data badger \
-    && echo "badger ALL=(root) NOPASSWD:ALL" > /etc/sudoers \
     && touch /etc/authbind/byport/80 \
     && touch /etc/authbind/byport/443 \
     && chmod 777 /etc/authbind/byport/80 \
@@ -28,4 +28,4 @@ RUN groupadd -g 999 badger \
 USER badger
 WORKDIR /var/www/html
 
-CMD ["authbind", "--deep", "/usr/local/bin/apache2-foreground"]
+CMD ["/usr/local/bin/run.sh"]

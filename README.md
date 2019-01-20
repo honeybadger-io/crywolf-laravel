@@ -38,7 +38,7 @@ up and running is via docker.
 ```sh
 > git clone https://github.com/honeybadger-io/crywolf-laravel.git
 > cd crywolf-laravel
-> bin/run
+> bin/start
 ```
 
 Open your browser and visit localhost: http://localhost:8080
